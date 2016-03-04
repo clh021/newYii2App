@@ -29,6 +29,14 @@ return [
             // for the mailer to send real emails.
             'useFileTransport' => true,
         ],
+        'log' => [
+            'targets' => [
+                [
+                    'class' => 'yii\log\DbTarget',
+                    'levels' => ['error', 'warning'],
+                ],
+            ],
+        ],
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
